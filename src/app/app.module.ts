@@ -9,23 +9,22 @@ import { UserListComponent } from './user-list/user-list.component';
 import { RegisterComponent } from './register/register.component';
 import { RegisterCodeComponent } from './register-code/register-code.component';
 import { RegisterPasswordComponent } from './register-password/register-password.component';
-import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    RegisterComponent,
+    RegisterCodeComponent,
+    RegisterPasswordComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTableModule
-    RegisterComponent,
-    RegisterCodeComponent,
-    RegisterPasswordComponent
-    UserProfileComponent
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

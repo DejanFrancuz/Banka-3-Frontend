@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,54 +12,56 @@ import { UserListComponent } from './user-list/user-list.component';
 import { RegisterComponent } from './register/register.component';
 import { RegisterCodeComponent } from './register-code/register-code.component';
 import { RegisterPasswordComponent } from './register-password/register-password.component';
-<<<<<<< HEAD
-=======
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
->>>>>>> dc83983294fb8ff81d324d6089d94b00dfab8c96
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserloginComponent } from './login/userlogin/userlogin.component';
 import { AdminLoginComponent } from './login/admin-login/admin-login.component';
 import {MatSortModule} from "@angular/material/sort";
 import {PaswordPopupComponent} from "./pasword-popup/pasword-popup.component";
+import { EditUserComponent } from './edit-user/edit-user.component';
+import {HttpClientModule} from "@angular/common/http";
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    UserListComponent,
-=======
     NavbarComponent,
     UserListComponent,
     UserloginComponent,
     AdminLoginComponent,
->>>>>>> 03e8171ddab4e722b48f5713ab4345a9e345579e
     RegisterComponent,
     RegisterCodeComponent,
     RegisterPasswordComponent,
     UserProfileComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     PaswordPopupComponent,
->>>>>>> dc83983294fb8ff81d324d6089d94b00dfab8c96
+    EditUserComponent,
+    EditEmployeeComponent,
+    CreateUserComponent,
+    CreateEmployeeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     MatTableModule,
-=======
 
->>>>>>> 03e8171ddab4e722b48f5713ab4345a9e345579e
-=======
     NgbModule,
     MatTableModule,
     FormsModule,
     MatSortModule,
-    ReactiveFormsModule
->>>>>>> dc83983294fb8ff81d324d6089d94b00dfab8c96
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

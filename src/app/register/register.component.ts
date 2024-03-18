@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {UserService} from "../services/user.service";
+import {User} from "../models/models";
 
 @Component({
   selector: 'app-register',
@@ -6,20 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  ime: string = '';
-  prezime: string = '';
-  jmbg: number = 0;
-  jmbgPlaceholder: string = 'JMBG';
-  email: string = '';
-  datumRodjenja: number = 0;
-  datumRodjenjaPlaceholder: string = 'Datum rodjenja';
-  pol: string = '';
-  adresa: string = '';
-  telefon: string = '';
+  firstName: string = ''
+  lastName: string= ''
+  jmbg: string = ''
+  user = {} as User;
+  gender: string = ''
+  phoneNumber: string = ''
+  email: string = ''
 
-  constructor() { }
+
+  constructor(private userService : UserService) { }
 
   onSubmit(): void {
+    this.userService.registerUser(this.firstName, this.lastName, this.jmbg,
+      this.user.dateOfBirth.toString(), this.gender, this.phoneNumber, this.email).subscribe(res => {
+      console.log(res)
+    })
+
     console.log('Form submitted!');
   }
 }
